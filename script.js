@@ -2,11 +2,6 @@
    PRASO CAREERS — APP LOGIC
    ═══════════════════════════════════════════ */
 
-const APPLY_URL = "https://praso.inhire.app/";
-const ROLE_TITLE = "Delivery Station Associate";
-const ROLE_SUBTITLE =
-  "Uma vaga para quem gosta de rotina prática, organização e ritmo. Você ajuda a operação da Praso a sair do papel e chegar bem até quem está tocando o negócio na ponta.";
-
 /* ═══════════════════════════════════════════
    SVG ICONS (stroke-based, 24×24 viewBox)
    ═══════════════════════════════════════════ */
@@ -180,7 +175,7 @@ const VALUES = [
   },
   {
     title: "Autonomia",
-    text: "Quando o processo funciona, o cliente ganha mais previsibilidade e controle para planear melhor."
+    text: "Quando o processo funciona, o cliente ganha mais previsibilidade e controle para planejar melhor."
   }
 ];
 
@@ -201,28 +196,12 @@ function renderCards(targetId, items, renderItem) {
   });
 }
 
-function setApplyLinks() {
-  document.querySelectorAll("[data-apply-link]").forEach((link) => {
-    link.href = APPLY_URL;
-    link.target = "_blank";
-    link.rel = "noreferrer";
-  });
-}
-
 
 /* ═══════════════════════════════════════════
    SCROLL REVEAL (Intersection Observer)
    ═══════════════════════════════════════════ */
 
 function initReveal() {
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (prefersReducedMotion) {
-    // Immediately show everything
-    document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("revealed"));
-    return;
-  }
-
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -268,14 +247,47 @@ function initTopbarScroll() {
 
 
 /* ═══════════════════════════════════════════
+   THEME TOGGLE (DARK MODE)
+   ═══════════════════════════════════════════ */
+
+function initThemeToggle() {
+  const toggle = document.getElementById("theme-toggle");
+  if (!toggle) return;
+
+  const html = document.documentElement;
+  const STORAGE_KEY = "praso-theme";
+
+  // Initial theme is already set by the blocking <script> in <head>.
+  // This handler only manages the toggle interaction.
+
+  toggle.addEventListener("click", () => {
+    const isDark = html.getAttribute("data-theme") === "dark";
+
+    // Enable transition animation
+    html.setAttribute("data-theme-transitioning", "");
+    requestAnimationFrame(() => {
+      if (isDark) {
+        html.removeAttribute("data-theme");
+        localStorage.setItem(STORAGE_KEY, "light");
+      } else {
+        html.setAttribute("data-theme", "dark");
+        localStorage.setItem(STORAGE_KEY, "dark");
+      }
+
+      // Clean up transition class after animation
+      setTimeout(() => {
+        html.removeAttribute("data-theme-transitioning");
+      }, 550);
+    });
+  });
+}
+
+
+/* ═══════════════════════════════════════════
    INIT
    ═══════════════════════════════════════════ */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Set dynamic text
-  document.getElementById("role-title").textContent = ROLE_TITLE;
-  document.getElementById("role-subtitle").textContent = ROLE_SUBTITLE;
-
   // Render overview cards with icons
   renderCards(
     "overview-points",
@@ -361,12 +373,12 @@ document.addEventListener("DOMContentLoaded", () => {
     `
   );
 
-  // Set apply links
-  setApplyLinks();
-
   // Initialize scroll reveal
   initReveal();
 
   // Initialize topbar behavior
   initTopbarScroll();
+
+  // Initialize dark mode toggle
+  initThemeToggle();
 });

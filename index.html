@@ -3,11 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Praso | Carreiras na Operação</title>
+    <title>Praso | Delivery Station Associate</title>
     <meta
       name="description"
-      content="Vaga operacional na Praso: trabalhe com ritmo, organização e impacto real na rotina do pequeno varejo. Candidata-se agora."
+      content="Vaga Delivery Station Associate na Praso: conheça a rotina, o impacto da operação e o contexto da função no dia a dia."
     />
+    <meta name="theme-color" content="#123da1" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Praso | Delivery Station Associate" />
+    <meta
+      property="og:description"
+      content="Conheça a vaga Delivery Station Associate na Praso e entenda como a operação impacta a experiência do pequeno varejo."
+    />
+    <meta property="og:image" content="./assets/images/office-celebration.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Praso | Delivery Station Associate" />
+    <meta
+      name="twitter:description"
+      content="Conheça a vaga Delivery Station Associate na Praso e entenda como a operação impacta a experiência do pequeno varejo."
+    />
+    <meta name="twitter:image" content="./assets/images/office-celebration.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,8 +31,17 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="./images/favicon.png" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css?v=20260417-darkmode" />
+    <script>
+      /* Blocking theme init — prevents flash of wrong theme */
+      (function() {
+        var saved = localStorage.getItem("praso-theme");
+        if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <script defer src="./script.js?v=20260417-darkmode"></script>
   </head>
   <body>
     <div class="page-shell">
@@ -33,18 +58,27 @@
           </svg>
           <span class="brand-tag">carreiras</span>
         </a>
-        <a class="button button-secondary topbar-cta" href="https://praso.inhire.app/vagas" target="_blank">Todas as vagas</a>
+        <div class="topbar-actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Alternar modo escuro" type="button">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+          <a class="button button-secondary topbar-cta" href="https://praso.inhire.app/vagas" target="_blank" rel="noopener noreferrer">Todas as vagas</a>
+        </div>
       </header>
 
       <main>
         <!-- ═══════ HERO ═══════ -->
         <section class="hero section" id="hero">
           <div class="hero-copy">
-            <p class="eyebrow">Operação logística / expedição</p>
-            <h1 id="role-title">Associado(a) de Operações Logísticas</h1>
-            <p class="hero-lead" id="role-subtitle"></p>
-            <div class="hero-actions" style="flex-wrap: wrap; gap: 12px;">
-              <a class="button button-primary button-pulse" href="https://praso.inhire.app/vagas" target="_blank">Ver vagas de Operação</a>
+            <p class="eyebrow">OPERAÇÕES LOGÍSTICAS</p>
+            <h1 id="role-title">Delivery Station Associate</h1>
+            <p class="role-alias">Equivalente funcional em PT-BR: Associado(a) de Operações Logísticas</p>
+            <p class="hero-lead" id="role-subtitle">
+              Uma vaga para quem gosta de rotina prática, organização e ritmo. Você ajuda a operação da Praso a sair do papel e chegar bem até quem está tocando o negócio na ponta.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary button-pulse" href="https://praso.inhire.app/vagas" target="_blank" rel="noopener noreferrer">Ver vagas de Operação</a>
             </div>
             <div class="hero-notes">
               <div class="hero-note" data-reveal>
@@ -52,21 +86,43 @@
                 <p>Quem cuida da operação ajuda o empreendedor a receber no prazo, comprar com previsibilidade e tocar o negócio com menos caos.</p>
               </div>
               <div class="hero-note" data-reveal data-delay="1">
-                <span class="note-label">Referência internacional</span>
-                <p>Inspirada na lógica de <strong>Delivery Station Associate</strong>, adaptada ao jeito direto e próximo da Praso.</p>
+                <span class="note-label">Padrão operacional</span>
+                <p>Inspirada em rotinas de operação de alta cadência, adaptada ao jeito direto, humano e próximo da Praso.</p>
               </div>
             </div>
           </div>
 
           <div class="hero-media" aria-label="Galeria inicial da cultura Praso">
             <figure class="hero-card hero-card-large">
-              <img src="./assets/images/team-party.jpg" alt="Time da Praso reunido em celebração" loading="eager" />
+              <img
+                src="./assets/images/team-party.jpg"
+                alt="Time da Praso reunido em celebração"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                width="1600"
+                height="1067"
+              />
             </figure>
             <figure class="hero-card hero-card-small hero-card-top">
-              <img src="./assets/images/office-celebration.jpg" alt="Colaboradoras da Praso comemorando campanha no escritório" loading="eager" />
+              <img
+                src="./assets/images/office-celebration.jpg"
+                alt="Colaboradoras da Praso comemorando campanha no escritório"
+                loading="lazy"
+                decoding="async"
+                width="675"
+                height="900"
+              />
             </figure>
             <figure class="hero-card hero-card-small hero-card-bottom">
-              <img src="./assets/images/ops-collab.jpg" alt="Equipe da Praso em trabalho colaborativo na operação" loading="eager" />
+              <img
+                src="./assets/images/ops-collab.jpg"
+                alt="Equipe da Praso em trabalho colaborativo na operação"
+                loading="lazy"
+                decoding="async"
+                width="750"
+                height="1000"
+              />
             </figure>
           </div>
         </section>
@@ -82,7 +138,7 @@
         <!-- ═══════ JOB OVERVIEW ═══════ -->
         <section class="section overview-grid" id="job-overview">
           <div class="section-heading" data-reveal>
-            <p class="eyebrow">Job Overview</p>
+            <p class="eyebrow">Visão geral da vaga</p>
             <h2>Você entra para fazer a operação rodar bem quando ela mais precisa.</h2>
           </div>
           <div class="overview-content">
@@ -99,9 +155,9 @@
         </section>
 
         <!-- ═══════ EXPLORE (WORKFLOW) ═══════ -->
-        <section class="section section-blue">
+        <section class="section section-blue" id="workflow-section">
           <div class="section-heading section-heading-light" data-reveal>
-            <p class="eyebrow eyebrow-light">Explore what it's like to be a Delivery Station Associate</p>
+            <p class="eyebrow eyebrow-light">Como funciona a rotina de operação</p>
             <h2>Ritmo alto, colaboração de verdade e atenção ao detalhe.</h2>
           </div>
           <div class="workflow" id="workflow-steps"></div>
@@ -110,7 +166,7 @@
         <!-- ═══════ RESPONSIBILITIES ═══════ -->
         <section class="section responsibilities-layout">
           <div class="section-heading" data-reveal>
-            <p class="eyebrow">Some of your duties & responsibilities may include</p>
+            <p class="eyebrow">Algumas responsabilidades do dia a dia</p>
             <h2>Você vai trabalhar com rotina prática. Sem rodeio.</h2>
           </div>
           <div class="responsibilities-grid">
@@ -129,14 +185,14 @@
         <section class="section love-grid">
           <div class="love-column">
             <div class="section-heading" data-reveal>
-              <p class="eyebrow">Why you'll love this job</p>
+              <p class="eyebrow">Por que essa vaga faz sentido</p>
               <h2>Trabalho visível, rotina dinâmica e aprendizado em movimento.</h2>
             </div>
             <div class="benefit-cards" id="job-highlights"></div>
           </div>
           <div class="love-column">
             <div class="section-heading" data-reveal>
-              <p class="eyebrow">Why you'll love Praso</p>
+              <p class="eyebrow">Por que trabalhar na Praso</p>
               <h2>Marca forte, cultura próxima e impacto real no pequeno varejo.</h2>
             </div>
             <div class="benefit-cards company-cards" id="company-reasons"></div>
@@ -160,13 +216,13 @@
           </div>
           <div class="gallery-grid">
             <figure class="gallery-card gallery-card-wide" data-reveal>
-              <img src="./assets/images/brand-day.jpg" alt="Equipe da Praso em evento de marca com decoração azul e preta" loading="lazy" />
+              <img src="./assets/images/brand-day.jpg" alt="Equipe da Praso em evento de marca com decoração azul e preta" loading="lazy" decoding="async" width="1200" height="1600" />
             </figure>
             <figure class="gallery-card" data-reveal data-delay="1">
-              <img src="./assets/images/team-awards.jpg" alt="Colaboradores da Praso em campanha interna segurando brindes" loading="lazy" />
+              <img src="./assets/images/team-awards.jpg" alt="Colaboradores da Praso em campanha interna segurando brindes" loading="lazy" decoding="async" width="675" height="900" />
             </figure>
             <figure class="gallery-card" data-reveal data-delay="2">
-              <img src="./assets/images/christmas-team.jpg" alt="Colaboradores da Praso ao lado de árvore de Natal no escritório" loading="lazy" />
+              <img src="./assets/images/christmas-team.jpg" alt="Colaboradores da Praso ao lado de árvore de Natal no escritório" loading="lazy" decoding="async" width="1200" height="1600" />
             </figure>
             <figure class="gallery-card gallery-card-quote" data-reveal data-delay="3">
               <blockquote>
@@ -186,12 +242,12 @@
               A operação certa muda o dia de quem compra com a gente. Se você quer trabalhar perto do que realmente move o negócio, vem para a Praso.
             </p>
           </div>
-          <div class="final-cta-actions" style="flex-direction: column; align-items: center; gap: 16px;">
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 8px;">Confira nossas vagas abertas:</p>
-            <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
-              <a class="button button-primary button-lg button-pulse" href="https://praso.inhire.app/vagas" target="_blank">Todas as Vagas de Operação</a>
-              <a class="button button-secondary button-lg" href="https://praso.inhire.app/vagas/b3f68872-828f-47bc-8eca-d06f758685de/category-manager-recife" target="_blank">Vaga: Category Manager (Recife)</a>
-              <a class="button button-secondary button-lg" href="https://praso.inhire.app/vagas/45c1b480-d077-4263-a5fe-f3e2703a785a/business-developmentmanager-fortaleza" target="_blank">Vaga: Business Dev Manager (Fortaleza)</a>
+          <div class="final-cta-actions">
+            <p class="final-cta-note">Confira as vagas abertas e veja exatamente qual cargo está disponível em cada local.</p>
+            <div class="final-cta-buttons">
+              <a class="button button-secondary button-lg" href="https://praso.inhire.app/vagas/b3f68872-828f-47bc-8eca-d06f758685de/category-manager-recife" target="_blank" rel="noopener noreferrer">Category Manager | Recife</a>
+              <a class="button button-secondary button-lg" href="https://praso.inhire.app/vagas/45c1b480-d077-4263-a5fe-f3e2703a785a/business-developmentmanager-fortaleza" target="_blank" rel="noopener noreferrer">Business Development Manager | Fortaleza</a>
+              <a class="button button-primary button-lg button-pulse" href="https://praso.inhire.app/vagas" target="_blank" rel="noopener noreferrer">Todas as vagas</a>
             </div>
           </div>
         </section>
@@ -201,7 +257,7 @@
       <footer class="site-footer">
         <div class="footer-inner">
           <div class="footer-brand">
-            <a href="https://praso.com.br" target="_blank" rel="noreferrer" class="footer-logo" aria-label="Praso">
+            <a href="https://praso.com.br" target="_blank" rel="noopener noreferrer" class="footer-logo" aria-label="Praso">
               <svg viewBox="0 0 113 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-svg footer-brand-svg">
                 <path d="M23.6802 7.88362V10.14H26.0131H28.2702V7.88362V5.55002H26.0131H23.6802V7.88362Z" fill="currentColor"></path>
                 <path d="M9.22609 8.75373L6 11.9808V16.688V21.3818H9.26608H12.5322V24.6489V27.9159H9.26608H6V31.183V34.45H9.26608H12.5322V31.183V27.9159H17.1713H21.7972L25.1032 24.6089L28.27 21.3152V16.6746V12.0474H25.1299H21.8638V8.7804V5.55001H17.158H12.4655L9.22609 8.75373ZM21.8638 16.7146V21.3818H17.198H12.5322V16.7146V12.0474H17.198H21.8638V16.7146Z" fill="currentColor"></path>
@@ -216,13 +272,14 @@
           </div>
           <div class="footer-nav">
             <h4>Links</h4>
-            <a href="https://praso.com.br" target="_blank" rel="noreferrer">Site principal</a>
-            <a data-apply-link href="#">Candidatar-se</a>
+            <a href="https://praso.com.br" target="_blank" rel="noopener noreferrer">Site principal</a>
+            <a href="https://praso.inhire.app/vagas" target="_blank" rel="noopener noreferrer">Candidatar-se</a>
             <a href="#job-overview">Visão da vaga</a>
           </div>
           <div class="footer-nav">
             <h4>Seções</h4>
-            <a href="#job-overview">Job Overview</a>
+            <a href="#job-overview">Visão geral</a>
+            <a href="#workflow-section">Rotina</a>
             <a href="#hero">A vaga</a>
           </div>
         </div>
