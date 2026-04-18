@@ -155,10 +155,6 @@
     flex-direction: column;
   }
 
-  .brand-word {
-    font-size: 1.72rem;
-  }
-
   .brand-tag {
     display: none;
   }

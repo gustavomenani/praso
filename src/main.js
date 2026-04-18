@@ -1,4 +1,3 @@
-import './styles/main.css';
 import {
   COMPANY_REASONS,
   JOB_HIGHLIGHTS,
@@ -149,7 +148,8 @@ function initThemeToggle() {
   });
 
   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  const hasSavedTheme = getStoredTheme() === 'dark' || getStoredTheme() === 'light';
+  const storedTheme = getStoredTheme();
+  const hasSavedTheme = storedTheme === 'dark' || storedTheme === 'light';
 
   if (!hasSavedTheme && typeof mediaQuery.addEventListener === 'function') {
     mediaQuery.addEventListener('change', (event) => {
@@ -240,9 +240,19 @@ function renderPageContent() {
   );
 }
 
+function initFooterYear() {
+  const year = document.getElementById('footer-year');
+  if (!year) {
+    return;
+  }
+
+  year.textContent = String(new Date().getFullYear());
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderPageContent();
   initReveal();
   initTopbarScroll();
   initThemeToggle();
+  initFooterYear();
 });
