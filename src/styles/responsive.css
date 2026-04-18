@@ -1,0 +1,199 @@
+/* ═══════════════════════════════════════════
+   RESPONSIVE — TABLET
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 1080px) {
+  .hero,
+  .overview-content,
+  .responsibilities-grid,
+  .love-grid,
+  .final-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    min-height: 520px;
+  }
+
+  .workflow,
+  .values-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-card-wide,
+  .gallery-card-quote {
+    grid-column: span 2;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+
+  /* Hide connector lines on 2-column workflow */
+  .workflow-step:nth-child(2n)::after {
+    display: none;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — MOBILE
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 780px) {
+  .topbar {
+    padding-top: 18px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topbar-actions {
+    width: 100%;
+  }
+
+  .topbar-cta {
+    width: 100%;
+  }
+
+  .hero {
+    padding-top: 10px;
+  }
+
+  .hero-notes,
+  .overview-card-list,
+  .workflow,
+  .values-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    min-height: 420px;
+  }
+
+  .hero-card-large {
+    inset: 12% 0 0;
+  }
+
+  .hero-card-small {
+    width: 44%;
+    height: 33%;
+  }
+
+  .hero-card-top {
+    top: 0;
+  }
+
+  .hero-card-bottom {
+    right: 0;
+    bottom: -4%;
+  }
+
+  .gallery-card-wide,
+  .gallery-card-quote {
+    grid-column: auto;
+  }
+
+  .section {
+    padding-top: 42px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 0 24px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  /* Hide all connector lines on single-column */
+  .workflow-step::after {
+    display: none;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — SMALL MOBILE
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 540px) {
+  :root {
+    --content-width: min(calc(100vw - 24px), 100%);
+  }
+
+  .topbar,
+  .section,
+  .section-blue .section-heading,
+  .workflow {
+    width: auto;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .button,
+  .final-cta-actions {
+    width: 100%;
+  }
+
+  .final-cta-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .button {
+    min-height: 50px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .brand-word {
+    font-size: 1.72rem;
+  }
+
+  .brand-tag {
+    display: none;
+  }
+
+  .hero-media {
+    min-height: 350px;
+  }
+
+  .hero-card-small {
+    display: none;
+  }
+
+  .hero-card-large {
+    inset: 0;
+  }
+
+  .mission-strip p,
+  .overview-card-featured,
+  .impact-panel,
+  .gallery-card-quote,
+  .value-card {
+    padding: 20px;
+  }
+
+  blockquote {
+    font-size: 1.8rem;
+  }
+
+  .footer-inner {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .footer-bottom {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -16,54 +16,120 @@
       property="og:description"
       content="Conheça a vaga Delivery Station Associate na Praso e entenda como a operação impacta a experiência do pequeno varejo."
     />
-    <meta property="og:image" content="./assets/images/office-celebration.jpg" />
+    <meta property="og:image" content="/assets/images/office-celebration.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Praso | Delivery Station Associate" />
     <meta
       name="twitter:description"
       content="Conheça a vaga Delivery Station Associate na Praso e entenda como a operação impacta a experiência do pequeno varejo."
     />
-    <meta name="twitter:image" content="./assets/images/office-celebration.jpg" />
+    <meta name="twitter:image" content="/assets/images/office-celebration.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="./images/favicon.png" />
-    <link rel="stylesheet" href="./styles.css?v=20260417-darkmode" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
     <script>
-      /* Blocking theme init — prevents flash of wrong theme */
-      (function() {
-        var saved = localStorage.getItem("praso-theme");
-        if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-          document.documentElement.setAttribute("data-theme", "dark");
+      (function () {
+        try {
+          var saved = localStorage.getItem('praso-theme');
+          if (
+            saved === 'dark' ||
+            (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          ) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (error) {
+          // no-op
         }
       })();
     </script>
-    <script defer src="./script.js?v=20260417-darkmode"></script>
+    <script type="module" src="/src/main.js"></script>
   </head>
   <body>
     <div class="page-shell">
       <header class="topbar" id="topbar">
         <a class="brand" href="#hero" aria-label="Praso carreiras">
-          <svg viewBox="0 0 113 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-svg topbar-brand-svg">
-            <path d="M23.6802 7.88362V10.14H26.0131H28.2702V7.88362V5.55002H26.0131H23.6802V7.88362Z" fill="currentColor"></path>
-            <path d="M9.22609 8.75373L6 11.9808V16.688V21.3818H9.26608H12.5322V24.6489V27.9159H9.26608H6V31.183V34.45H9.26608H12.5322V31.183V27.9159H17.1713H21.7972L25.1032 24.6089L28.27 21.3152V16.6746V12.0474H25.1299H21.8638V8.7804V5.55001H17.158H12.4655L9.22609 8.75373ZM21.8638 16.7146V21.3818H17.198H12.5322V16.7146V12.0474H17.198H21.8638V16.7146Z" fill="currentColor"></path>
-            <path d="M99.161 10.6515C96.3098 11.0449 94.2746 12.8566 93.5687 15.629C93.312 16.6263 93.312 18.3007 93.5687 19.3072C93.8804 20.5515 94.4029 21.4757 95.3105 22.3723C95.9431 23.0128 96.2456 23.2324 96.8691 23.5344C98.0792 24.1108 98.6293 24.2297 100.169 24.2297C101.279 24.2389 101.618 24.2023 102.214 24.0284C104.552 23.3605 106.184 21.6953 106.825 19.3438C107.054 18.5111 107.054 16.425 106.825 15.5924C106.009 12.6461 103.69 10.7979 100.573 10.624C100.124 10.5966 99.491 10.6057 99.161 10.6515ZM101.664 13.8997C102.251 14.1925 102.984 14.9061 103.277 15.4826C104.112 17.1112 103.8 19.2248 102.562 20.3777C101.81 21.0822 101.416 21.2195 100.169 21.2195C99.1885 21.2195 99.0785 21.2012 98.5834 20.9541C96.8141 20.0574 96.0898 17.587 97.0157 15.5924C97.4466 14.6591 98.0792 14.0735 99.0051 13.7441C99.7386 13.4788 100.958 13.552 101.664 13.8997Z" fill="currentColor"></path>
-            <path d="M85.2718 10.5234C83.1265 10.8436 81.5955 11.6854 80.9813 12.9023C80.0645 14.7231 80.7246 16.8001 82.5306 17.7609C83.5116 18.2824 84.4742 18.5203 86.3261 18.7033C88.013 18.868 88.618 19.2157 88.618 20.0117C88.618 20.762 87.9855 21.3384 86.922 21.558C85.6568 21.8142 83.1632 21.0639 82.0997 20.1032C81.8981 19.9202 81.7239 19.7921 81.7055 19.8104C81.4763 20.0849 80.1837 22.0155 80.1837 22.0795C80.1837 22.29 81.3663 23.205 82.1364 23.5893C83.1632 24.1016 83.7591 24.2663 85.1526 24.3944C88.233 24.6964 90.6899 23.6625 91.5426 21.7044C92.0101 20.6522 91.9734 19.3438 91.46 18.2824C90.8 16.9282 89.3056 16.1962 86.7203 15.9675C84.7584 15.7845 84.2358 15.5924 83.9058 14.9153C83.7591 14.6225 83.7499 14.5127 83.8416 14.2199C84.0433 13.5428 84.8042 13.2134 86.1519 13.2134C87.4354 13.2134 88.3155 13.4788 89.1589 14.1193L89.4615 14.348L89.6632 14.1101C89.764 13.982 90.1766 13.4971 90.5708 13.0487L91.2859 12.2161L90.8 11.8501C90.1399 11.356 89.0673 10.8619 88.2972 10.6972C87.6371 10.56 85.7669 10.4502 85.2718 10.5234Z" fill="currentColor"></path>
-            <path d="M68.999 10.6972C66.0286 11.292 64.1951 13.369 63.8559 16.5165C63.7367 17.587 63.865 19.0144 64.1492 19.966C64.6626 21.6129 65.7444 22.9396 67.1654 23.6259C68.1831 24.1199 68.8248 24.2846 70.0166 24.3487C71.9327 24.4493 73.7112 23.7448 74.5913 22.537L74.8389 22.1893L74.903 22.6102C74.9305 22.839 74.9581 23.1867 74.9581 23.3788C74.9581 24.0284 74.903 24.0101 76.5716 24.0101H78.0751V10.8345H74.9764L74.848 12.5638L74.3438 12.024C73.7846 11.4201 72.932 10.9351 71.9785 10.6972C71.3184 10.5325 69.8333 10.5325 68.999 10.6972ZM72.5928 13.7807C73.9496 14.412 74.7747 15.7845 74.7747 17.404C74.7747 19.0693 73.9588 20.4417 72.6386 21.0456C71.841 21.4025 70.4842 21.4665 69.6224 21.1829C68.5864 20.8352 67.7522 20.0391 67.3396 19.0052C67.0371 18.2366 67.0371 16.608 67.3396 15.8394C67.743 14.8146 68.5589 14.0278 69.5857 13.6801C70.4108 13.3964 71.8593 13.4422 72.5928 13.7807Z" fill="currentColor"></path>
-            <path d="M59.1895 10.5691C58.1077 10.6606 57.5118 10.9351 56.7967 11.658L56.1824 12.2802L55.9624 10.8345H52.9554V24.0101H56.1549L56.1824 20.094C56.2099 16.242 56.2191 16.1779 56.43 15.6381C56.7417 14.8329 57.4201 14.2016 58.2269 13.9546C59.382 13.5977 60.5921 13.735 61.4539 14.3205L61.8298 14.5859L62.5632 13.186C63.3975 11.6214 63.3883 11.6946 62.6091 11.2371C61.6648 10.6881 60.5005 10.4593 59.1895 10.5691Z" fill="currentColor"></path>
-            <path d="M42.605 10.6972C41.6698 10.9077 40.7347 11.4018 40.0838 12.024L39.5062 12.5821L39.4421 12.0972C39.4146 11.8318 39.3596 11.4384 39.3321 11.2188L39.2771 10.8345H36.27V29.5H39.4787V22.5096L39.9188 22.9305C40.4689 23.4612 40.9914 23.754 41.8624 24.0284C42.4583 24.2114 42.7333 24.2389 43.971 24.2297C45.2544 24.2297 45.4561 24.2023 46.1254 23.9827C47.143 23.6442 47.9406 23.1592 48.6649 22.4272C49.1599 21.9331 49.3799 21.6129 49.7375 20.8718C50.3242 19.6549 50.5167 18.7948 50.5076 17.3766C50.4984 16.1048 50.3059 15.2264 49.8017 14.1833C48.9949 12.5272 47.4272 11.2462 45.6212 10.7979C44.7594 10.5783 43.32 10.5325 42.605 10.6972ZM44.6585 13.8722C45.557 14.101 46.4371 14.8055 46.8405 15.629C47.7664 17.5138 47.1063 19.7738 45.3645 20.6979C43.4392 21.7227 41.0831 20.9816 40.1755 19.0693C39.9096 18.5111 39.8913 18.4105 39.8913 17.4223C39.8913 16.4707 39.9188 16.3152 40.1388 15.8486C40.4689 15.1532 40.7989 14.7231 41.2848 14.3937C42.2107 13.7533 43.4392 13.5703 44.6585 13.8722Z" fill="currentColor"></path>
+          <svg
+            viewBox="0 0 113 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="brand-svg topbar-brand-svg"
+          >
+            <path
+              d="M23.6802 7.88362V10.14H26.0131H28.2702V7.88362V5.55002H26.0131H23.6802V7.88362Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M9.22609 8.75373L6 11.9808V16.688V21.3818H9.26608H12.5322V24.6489V27.9159H9.26608H6V31.183V34.45H9.26608H12.5322V31.183V27.9159H17.1713H21.7972L25.1032 24.6089L28.27 21.3152V16.6746V12.0474H25.1299H21.8638V8.7804V5.55001H17.158H12.4655L9.22609 8.75373ZM21.8638 16.7146V21.3818H17.198H12.5322V16.7146V12.0474H17.198H21.8638V16.7146Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M99.161 10.6515C96.3098 11.0449 94.2746 12.8566 93.5687 15.629C93.312 16.6263 93.312 18.3007 93.5687 19.3072C93.8804 20.5515 94.4029 21.4757 95.3105 22.3723C95.9431 23.0128 96.2456 23.2324 96.8691 23.5344C98.0792 24.1108 98.6293 24.2297 100.169 24.2297C101.279 24.2389 101.618 24.2023 102.214 24.0284C104.552 23.3605 106.184 21.6953 106.825 19.3438C107.054 18.5111 107.054 16.425 106.825 15.5924C106.009 12.6461 103.69 10.7979 100.573 10.624C100.124 10.5966 99.491 10.6057 99.161 10.6515ZM101.664 13.8997C102.251 14.1925 102.984 14.9061 103.277 15.4826C104.112 17.1112 103.8 19.2248 102.562 20.3777C101.81 21.0822 101.416 21.2195 100.169 21.2195C99.1885 21.2195 99.0785 21.2012 98.5834 20.9541C96.8141 20.0574 96.0898 17.587 97.0157 15.5924C97.4466 14.6591 98.0792 14.0735 99.0051 13.7441C99.7386 13.4788 100.958 13.552 101.664 13.8997Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M85.2718 10.5234C83.1265 10.8436 81.5955 11.6854 80.9813 12.9023C80.0645 14.7231 80.7246 16.8001 82.5306 17.7609C83.5116 18.2824 84.4742 18.5203 86.3261 18.7033C88.013 18.868 88.618 19.2157 88.618 20.0117C88.618 20.762 87.9855 21.3384 86.922 21.558C85.6568 21.8142 83.1632 21.0639 82.0997 20.1032C81.8981 19.9202 81.7239 19.7921 81.7055 19.8104C81.4763 20.0849 80.1837 22.0155 80.1837 22.0795C80.1837 22.29 81.3663 23.205 82.1364 23.5893C83.1632 24.1016 83.7591 24.2663 85.1526 24.3944C88.233 24.6964 90.6899 23.6625 91.5426 21.7044C92.0101 20.6522 91.9734 19.3438 91.46 18.2824C90.8 16.9282 89.3056 16.1962 86.7203 15.9675C84.7584 15.7845 84.2358 15.5924 83.9058 14.9153C83.7591 14.6225 83.7499 14.5127 83.8416 14.2199C84.0433 13.5428 84.8042 13.2134 86.1519 13.2134C87.4354 13.2134 88.3155 13.4788 89.1589 14.1193L89.4615 14.348L89.6632 14.1101C89.764 13.982 90.1766 13.4971 90.5708 13.0487L91.2859 12.2161L90.8 11.8501C90.1399 11.356 89.0673 10.8619 88.2972 10.6972C87.6371 10.56 85.7669 10.4502 85.2718 10.5234Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M68.999 10.6972C66.0286 11.292 64.1951 13.369 63.8559 16.5165C63.7367 17.587 63.865 19.0144 64.1492 19.966C64.6626 21.6129 65.7444 22.9396 67.1654 23.6259C68.1831 24.1199 68.8248 24.2846 70.0166 24.3487C71.9327 24.4493 73.7112 23.7448 74.5913 22.537L74.8389 22.1893L74.903 22.6102C74.9305 22.839 74.9581 23.1867 74.9581 23.3788C74.9581 24.0284 74.903 24.0101 76.5716 24.0101H78.0751V10.8345H74.9764L74.848 12.5638L74.3438 12.024C73.7846 11.4201 72.932 10.9351 71.9785 10.6972C71.3184 10.5325 69.8333 10.5325 68.999 10.6972ZM72.5928 13.7807C73.9496 14.412 74.7747 15.7845 74.7747 17.404C74.7747 19.0693 73.9588 20.4417 72.6386 21.0456C71.841 21.4025 70.4842 21.4665 69.6224 21.1829C68.5864 20.8352 67.7522 20.0391 67.3396 19.0052C67.0371 18.2366 67.0371 16.608 67.3396 15.8394C67.743 14.8146 68.5589 14.0278 69.5857 13.6801C70.4108 13.3964 71.8593 13.4422 72.5928 13.7807Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M59.1895 10.5691C58.1077 10.6606 57.5118 10.9351 56.7967 11.658L56.1824 12.2802L55.9624 10.8345H52.9554V24.0101H56.1549L56.1824 20.094C56.2099 16.242 56.2191 16.1779 56.43 15.6381C56.7417 14.8329 57.4201 14.2016 58.2269 13.9546C59.382 13.5977 60.5921 13.735 61.4539 14.3205L61.8298 14.5859L62.5632 13.186C63.3975 11.6214 63.3883 11.6946 62.6091 11.2371C61.6648 10.6881 60.5005 10.4593 59.1895 10.5691Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M42.605 10.6972C41.6698 10.9077 40.7347 11.4018 40.0838 12.024L39.5062 12.5821L39.4421 12.0972C39.4146 11.8318 39.3596 11.4384 39.3321 11.2188L39.2771 10.8345H36.27V29.5H39.4787V22.5096L39.9188 22.9305C40.4689 23.4612 40.9914 23.754 41.8624 24.0284C42.4583 24.2114 42.7333 24.2389 43.971 24.2297C45.2544 24.2297 45.4561 24.2023 46.1254 23.9827C47.143 23.6442 47.9406 23.1592 48.6649 22.4272C49.1599 21.9331 49.3799 21.6129 49.7375 20.8718C50.3242 19.6549 50.5167 18.7948 50.5076 17.3766C50.4984 16.1048 50.3059 15.2264 49.8017 14.1833C48.9949 12.5272 47.4272 11.2462 45.6212 10.7979C44.7594 10.5783 43.32 10.5325 42.605 10.6972ZM44.6585 13.8722C45.557 14.101 46.4371 14.8055 46.8405 15.629C47.7664 17.5138 47.1063 19.7738 45.3645 20.6979C43.4392 21.7227 41.0831 20.9816 40.1755 19.0693C39.9096 18.5111 39.8913 18.4105 39.8913 17.4223C39.8913 16.4707 39.9188 16.3152 40.1388 15.8486C40.4689 15.1532 40.7989 14.7231 41.2848 14.3937C42.2107 13.7533 43.4392 13.5703 44.6585 13.8722Z"
+              fill="currentColor"
+            ></path>
           </svg>
           <span class="brand-tag">carreiras</span>
         </a>
         <div class="topbar-actions">
-          <button class="theme-toggle" id="theme-toggle" aria-label="Alternar modo escuro" type="button">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Ativar modo escuro"
+            aria-pressed="false"
+            type="button"
+          >
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+            </svg>
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <path
+                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+              />
+            </svg>
           </button>
-          <a class="button button-secondary topbar-cta" href="https://praso.inhire.app/vagas" target="_blank" rel="noopener noreferrer">Todas as vagas</a>
+          <a
+            class="button button-secondary topbar-cta"
+            href="https://praso.inhire.app/vagas"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Todas as vagas</a
+          >
         </div>
       </header>
 
@@ -73,56 +139,83 @@
           <div class="hero-copy">
             <p class="eyebrow">OPERAÇÕES LOGÍSTICAS</p>
             <h1 id="role-title">Delivery Station Associate</h1>
-            <p class="role-alias">Equivalente funcional em PT-BR: Associado(a) de Operações Logísticas</p>
+            <p class="role-alias">
+              Equivalente funcional em PT-BR: Associado(a) de Operações Logísticas
+            </p>
             <p class="hero-lead" id="role-subtitle">
-              Uma vaga para quem gosta de rotina prática, organização e ritmo. Você ajuda a operação da Praso a sair do papel e chegar bem até quem está tocando o negócio na ponta.
+              Uma vaga para quem gosta de rotina prática, organização e ritmo. Você ajuda a operação
+              da Praso a sair do papel e chegar bem até quem está tocando o negócio na ponta.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary button-pulse" href="https://praso.inhire.app/vagas" target="_blank" rel="noopener noreferrer">Ver vagas de Operação</a>
+              <a
+                class="button button-primary button-pulse"
+                href="https://praso.inhire.app/vagas"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver vagas de Operação</a
+              >
             </div>
             <div class="hero-notes">
               <div class="hero-note" data-reveal>
                 <span class="note-label">Missão em prática</span>
-                <p>Quem cuida da operação ajuda o empreendedor a receber no prazo, comprar com previsibilidade e tocar o negócio com menos caos.</p>
+                <p>
+                  Quem cuida da operação ajuda o empreendedor a receber no prazo, comprar com
+                  previsibilidade e tocar o negócio com menos caos.
+                </p>
               </div>
               <div class="hero-note" data-reveal data-delay="1">
                 <span class="note-label">Padrão operacional</span>
-                <p>Inspirada em rotinas de operação de alta cadência, adaptada ao jeito direto, humano e próximo da Praso.</p>
+                <p>
+                  Inspirada em rotinas de operação de alta cadência, adaptada ao jeito direto,
+                  humano e próximo da Praso.
+                </p>
               </div>
             </div>
           </div>
 
           <div class="hero-media" aria-label="Galeria inicial da cultura Praso">
             <figure class="hero-card hero-card-large">
-              <img
-                src="./assets/images/team-party.jpg"
-                alt="Time da Praso reunido em celebração"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-                width="1600"
-                height="1067"
-              />
+              <picture>
+                <source srcset="/assets/images/team-party.avif" type="image/avif" />
+                <source srcset="/assets/images/team-party.webp" type="image/webp" />
+                <img
+                  src="/assets/images/team-party.jpg"
+                  alt="Time da Praso reunido em celebração"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                  width="1600"
+                  height="1067"
+                />
+              </picture>
             </figure>
             <figure class="hero-card hero-card-small hero-card-top">
-              <img
-                src="./assets/images/office-celebration.jpg"
-                alt="Colaboradoras da Praso comemorando campanha no escritório"
-                loading="lazy"
-                decoding="async"
-                width="675"
-                height="900"
-              />
+              <picture>
+                <source srcset="/assets/images/office-celebration.avif" type="image/avif" />
+                <source srcset="/assets/images/office-celebration.webp" type="image/webp" />
+                <img
+                  src="/assets/images/office-celebration.jpg"
+                  alt="Colaboradoras da Praso comemorando campanha no escritório"
+                  loading="lazy"
+                  decoding="async"
+                  width="675"
+                  height="900"
+                />
+              </picture>
             </figure>
             <figure class="hero-card hero-card-small hero-card-bottom">
-              <img
-                src="./assets/images/ops-collab.jpg"
-                alt="Equipe da Praso em trabalho colaborativo na operação"
-                loading="lazy"
-                decoding="async"
-                width="750"
-                height="1000"
-              />
+              <picture>
+                <source srcset="/assets/images/ops-collab.avif" type="image/avif" />
+                <source srcset="/assets/images/ops-collab.webp" type="image/webp" />
+                <img
+                  src="/assets/images/ops-collab.jpg"
+                  alt="Equipe da Praso em trabalho colaborativo na operação"
+                  loading="lazy"
+                  decoding="async"
+                  width="750"
+                  height="1000"
+                />
+              </picture>
             </figure>
           </div>
         </section>
@@ -144,10 +237,14 @@
           <div class="overview-content">
             <article class="overview-card overview-card-featured" data-reveal>
               <p>
-                Aqui, operação não é bastidor. É parte direta da experiência do cliente. Quando o recebimento é bem feito, a separação sai no tempo certo e a expedição flui, o empreendedor sente isso na ponta.
+                Aqui, operação não é bastidor. É parte direta da experiência do cliente. Quando o
+                recebimento é bem feito, a separação sai no tempo certo e a expedição flui, o
+                empreendedor sente isso na ponta.
               </p>
               <p>
-                Seu trabalho ajuda a Praso cumprir o que promete: mais praticidade, mais previsibilidade e menos fricção para quem depende da entrega para tocar o negócio todos os dias.
+                Seu trabalho ajuda a Praso cumprir o que promete: mais praticidade, mais
+                previsibilidade e menos fricção para quem depende da entrega para tocar o negócio
+                todos os dias.
               </p>
             </article>
             <div class="overview-card-list" id="overview-points"></div>
@@ -175,7 +272,8 @@
               <p class="impact-label">Por que isso importa</p>
               <h3>Operação boa dá tranquilidade para quem está vendendo do outro lado.</h3>
               <p>
-                Nossos clientes têm pouco tempo para burocracia. Eles precisam de previsibilidade, respeito e agilidade. A operação é uma parte essencial dessa promessa.
+                Nossos clientes têm pouco tempo para burocracia. Eles precisam de previsibilidade,
+                respeito e agilidade. A operação é uma parte essencial dessa promessa.
               </p>
             </aside>
           </div>
@@ -216,17 +314,51 @@
           </div>
           <div class="gallery-grid">
             <figure class="gallery-card gallery-card-wide" data-reveal>
-              <img src="./assets/images/brand-day.jpg" alt="Equipe da Praso em evento de marca com decoração azul e preta" loading="lazy" decoding="async" width="1200" height="1600" />
+              <picture>
+                <source srcset="/assets/images/brand-day.avif" type="image/avif" />
+                <source srcset="/assets/images/brand-day.webp" type="image/webp" />
+                <img
+                  src="/assets/images/brand-day.jpg"
+                  alt="Equipe da Praso em evento de marca com decoração azul e preta"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="1600"
+                />
+              </picture>
             </figure>
             <figure class="gallery-card" data-reveal data-delay="1">
-              <img src="./assets/images/team-awards.jpg" alt="Colaboradores da Praso em campanha interna segurando brindes" loading="lazy" decoding="async" width="675" height="900" />
+              <picture>
+                <source srcset="/assets/images/team-awards.avif" type="image/avif" />
+                <source srcset="/assets/images/team-awards.webp" type="image/webp" />
+                <img
+                  src="/assets/images/team-awards.jpg"
+                  alt="Colaboradores da Praso em campanha interna segurando brindes"
+                  loading="lazy"
+                  decoding="async"
+                  width="675"
+                  height="900"
+                />
+              </picture>
             </figure>
             <figure class="gallery-card" data-reveal data-delay="2">
-              <img src="./assets/images/christmas-team.jpg" alt="Colaboradores da Praso ao lado de árvore de Natal no escritório" loading="lazy" decoding="async" width="1200" height="1600" />
+              <picture>
+                <source srcset="/assets/images/christmas-team.avif" type="image/avif" />
+                <source srcset="/assets/images/christmas-team.webp" type="image/webp" />
+                <img
+                  src="/assets/images/christmas-team.jpg"
+                  alt="Colaboradores da Praso ao lado de árvore de Natal no escritório"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="1600"
+                />
+              </picture>
             </figure>
             <figure class="gallery-card gallery-card-quote" data-reveal data-delay="3">
               <blockquote>
-                "Falamos com quem está na ponta sem hierarquia, sem palavrório e com os pés no chão."
+                "Falamos com quem está na ponta sem hierarquia, sem palavrório e com os pés no
+                chão."
               </blockquote>
               <p>Tom de voz da Praso</p>
             </figure>
@@ -239,15 +371,36 @@
             <p class="eyebrow">Próximo passo</p>
             <h2>Se você gosta de fazer acontecer, essa vaga pode ser o seu próximo passo.</h2>
             <p>
-              A operação certa muda o dia de quem compra com a gente. Se você quer trabalhar perto do que realmente move o negócio, vem para a Praso.
+              A operação certa muda o dia de quem compra com a gente. Se você quer trabalhar perto
+              do que realmente move o negócio, vem para a Praso.
             </p>
           </div>
           <div class="final-cta-actions">
-            <p class="final-cta-note">Confira as vagas abertas e veja exatamente qual cargo está disponível em cada local.</p>
+            <p class="final-cta-note">
+              Confira as vagas abertas e veja exatamente qual cargo está disponível em cada local.
+            </p>
             <div class="final-cta-buttons">
-              <a class="button button-secondary button-lg" href="https://praso.inhire.app/vagas/b3f68872-828f-47bc-8eca-d06f758685de/category-manager-recife" target="_blank" rel="noopener noreferrer">Category Manager | Recife</a>
-              <a class="button button-secondary button-lg" href="https://praso.inhire.app/vagas/45c1b480-d077-4263-a5fe-f3e2703a785a/business-developmentmanager-fortaleza" target="_blank" rel="noopener noreferrer">Business Development Manager | Fortaleza</a>
-              <a class="button button-primary button-lg button-pulse" href="https://praso.inhire.app/vagas" target="_blank" rel="noopener noreferrer">Todas as vagas</a>
+              <a
+                class="button button-secondary button-lg"
+                href="https://praso.inhire.app/vagas/b3f68872-828f-47bc-8eca-d06f758685de/category-manager-recife"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Category Manager | Recife</a
+              >
+              <a
+                class="button button-secondary button-lg"
+                href="https://praso.inhire.app/vagas/45c1b480-d077-4263-a5fe-f3e2703a785a/business-developmentmanager-fortaleza"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Business Development Manager | Fortaleza</a
+              >
+              <a
+                class="button button-primary button-lg button-pulse"
+                href="https://praso.inhire.app/vagas"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Todas as vagas</a
+              >
             </div>
           </div>
         </section>
@@ -257,23 +410,61 @@
       <footer class="site-footer">
         <div class="footer-inner">
           <div class="footer-brand">
-            <a href="https://praso.com.br" target="_blank" rel="noopener noreferrer" class="footer-logo" aria-label="Praso">
-              <svg viewBox="0 0 113 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-svg footer-brand-svg">
-                <path d="M23.6802 7.88362V10.14H26.0131H28.2702V7.88362V5.55002H26.0131H23.6802V7.88362Z" fill="currentColor"></path>
-                <path d="M9.22609 8.75373L6 11.9808V16.688V21.3818H9.26608H12.5322V24.6489V27.9159H9.26608H6V31.183V34.45H9.26608H12.5322V31.183V27.9159H17.1713H21.7972L25.1032 24.6089L28.27 21.3152V16.6746V12.0474H25.1299H21.8638V8.7804V5.55001H17.158H12.4655L9.22609 8.75373ZM21.8638 16.7146V21.3818H17.198H12.5322V16.7146V12.0474H17.198H21.8638V16.7146Z" fill="currentColor"></path>
-                <path d="M99.161 10.6515C96.3098 11.0449 94.2746 12.8566 93.5687 15.629C93.312 16.6263 93.312 18.3007 93.5687 19.3072C93.8804 20.5515 94.4029 21.4757 95.3105 22.3723C95.9431 23.0128 96.2456 23.2324 96.8691 23.5344C98.0792 24.1108 98.6293 24.2297 100.169 24.2297C101.279 24.2389 101.618 24.2023 102.214 24.0284C104.552 23.3605 106.184 21.6953 106.825 19.3438C107.054 18.5111 107.054 16.425 106.825 15.5924C106.009 12.6461 103.69 10.7979 100.573 10.624C100.124 10.5966 99.491 10.6057 99.161 10.6515ZM101.664 13.8997C102.251 14.1925 102.984 14.9061 103.277 15.4826C104.112 17.1112 103.8 19.2248 102.562 20.3777C101.81 21.0822 101.416 21.2195 100.169 21.2195C99.1885 21.2195 99.0785 21.2012 98.5834 20.9541C96.8141 20.0574 96.0898 17.587 97.0157 15.5924C97.4466 14.6591 98.0792 14.0735 99.0051 13.7441C99.7386 13.4788 100.958 13.552 101.664 13.8997Z" fill="currentColor"></path>
-                <path d="M85.2718 10.5234C83.1265 10.8436 81.5955 11.6854 80.9813 12.9023C80.0645 14.7231 80.7246 16.8001 82.5306 17.7609C83.5116 18.2824 84.4742 18.5203 86.3261 18.7033C88.013 18.868 88.618 19.2157 88.618 20.0117C88.618 20.762 87.9855 21.3384 86.922 21.558C85.6568 21.8142 83.1632 21.0639 82.0997 20.1032C81.8981 19.9202 81.7239 19.7921 81.7055 19.8104C81.4763 20.0849 80.1837 22.0155 80.1837 22.0795C80.1837 22.29 81.3663 23.205 82.1364 23.5893C83.1632 24.1016 83.7591 24.2663 85.1526 24.3944C88.233 24.6964 90.6899 23.6625 91.5426 21.7044C92.0101 20.6522 91.9734 19.3438 91.46 18.2824C90.8 16.9282 89.3056 16.1962 86.7203 15.9675C84.7584 15.7845 84.2358 15.5924 83.9058 14.9153C83.7591 14.6225 83.7499 14.5127 83.8416 14.2199C84.0433 13.5428 84.8042 13.2134 86.1519 13.2134C87.4354 13.2134 88.3155 13.4788 89.1589 14.1193L89.4615 14.348L89.6632 14.1101C89.764 13.982 90.1766 13.4971 90.5708 13.0487L91.2859 12.2161L90.8 11.8501C90.1399 11.356 89.0673 10.8619 88.2972 10.6972C87.6371 10.56 85.7669 10.4502 85.2718 10.5234Z" fill="currentColor"></path>
-                <path d="M68.999 10.6972C66.0286 11.292 64.1951 13.369 63.8559 16.5165C63.7367 17.587 63.865 19.0144 64.1492 19.966C64.6626 21.6129 65.7444 22.9396 67.1654 23.6259C68.1831 24.1199 68.8248 24.2846 70.0166 24.3487C71.9327 24.4493 73.7112 23.7448 74.5913 22.537L74.8389 22.1893L74.903 22.6102C74.9305 22.839 74.9581 23.1867 74.9581 23.3788C74.9581 24.0284 74.903 24.0101 76.5716 24.0101H78.0751V10.8345H74.9764L74.848 12.5638L74.3438 12.024C73.7846 11.4201 72.932 10.9351 71.9785 10.6972C71.3184 10.5325 69.8333 10.5325 68.999 10.6972ZM72.5928 13.7807C73.9496 14.412 74.7747 15.7845 74.7747 17.404C74.7747 19.0693 73.9588 20.4417 72.6386 21.0456C71.841 21.4025 70.4842 21.4665 69.6224 21.1829C68.5864 20.8352 67.7522 20.0391 67.3396 19.0052C67.0371 18.2366 67.0371 16.608 67.3396 15.8394C67.743 14.8146 68.5589 14.0278 69.5857 13.6801C70.4108 13.3964 71.8593 13.4422 72.5928 13.7807Z" fill="currentColor"></path>
-                <path d="M59.1895 10.5691C58.1077 10.6606 57.5118 10.9351 56.7967 11.658L56.1824 12.2802L55.9624 10.8345H52.9554V24.0101H56.1549L56.1824 20.094C56.2099 16.242 56.2191 16.1779 56.43 15.6381C56.7417 14.8329 57.4201 14.2016 58.2269 13.9546C59.382 13.5977 60.5921 13.735 61.4539 14.3205L61.8298 14.5859L62.5632 13.186C63.3975 11.6214 63.3883 11.6946 62.6091 11.2371C61.6648 10.6881 60.5005 10.4593 59.1895 10.5691Z" fill="currentColor"></path>
-                <path d="M42.605 10.6972C41.6698 10.9077 40.7347 11.4018 40.0838 12.024L39.5062 12.5821L39.4421 12.0972C39.4146 11.8318 39.3596 11.4384 39.3321 11.2188L39.2771 10.8345H36.27V29.5H39.4787V22.5096L39.9188 22.9305C40.4689 23.4612 40.9914 23.754 41.8624 24.0284C42.4583 24.2114 42.7333 24.2389 43.971 24.2297C45.2544 24.2297 45.4561 24.2023 46.1254 23.9827C47.143 23.6442 47.9406 23.1592 48.6649 22.4272C49.1599 21.9331 49.3799 21.6129 49.7375 20.8718C50.3242 19.6549 50.5167 18.7948 50.5076 17.3766C50.4984 16.1048 50.3059 15.2264 49.8017 14.1833C48.9949 12.5272 47.4272 11.2462 45.6212 10.7979C44.7594 10.5783 43.32 10.5325 42.605 10.6972ZM44.6585 13.8722C45.557 14.101 46.4371 14.8055 46.8405 15.629C47.7664 17.5138 47.1063 19.7738 45.3645 20.6979C43.4392 21.7227 41.0831 20.9816 40.1755 19.0693C39.9096 18.5111 39.8913 18.4105 39.8913 17.4223C39.8913 16.4707 39.9188 16.3152 40.1388 15.8486C40.4689 15.1532 40.7989 14.7231 41.2848 14.3937C42.2107 13.7533 43.4392 13.5703 44.6585 13.8722Z" fill="currentColor"></path>
+            <a
+              href="https://praso.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-logo"
+              aria-label="Praso"
+            >
+              <svg
+                viewBox="0 0 113 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="brand-svg footer-brand-svg"
+              >
+                <path
+                  d="M23.6802 7.88362V10.14H26.0131H28.2702V7.88362V5.55002H26.0131H23.6802V7.88362Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M9.22609 8.75373L6 11.9808V16.688V21.3818H9.26608H12.5322V24.6489V27.9159H9.26608H6V31.183V34.45H9.26608H12.5322V31.183V27.9159H17.1713H21.7972L25.1032 24.6089L28.27 21.3152V16.6746V12.0474H25.1299H21.8638V8.7804V5.55001H17.158H12.4655L9.22609 8.75373ZM21.8638 16.7146V21.3818H17.198H12.5322V16.7146V12.0474H17.198H21.8638V16.7146Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M99.161 10.6515C96.3098 11.0449 94.2746 12.8566 93.5687 15.629C93.312 16.6263 93.312 18.3007 93.5687 19.3072C93.8804 20.5515 94.4029 21.4757 95.3105 22.3723C95.9431 23.0128 96.2456 23.2324 96.8691 23.5344C98.0792 24.1108 98.6293 24.2297 100.169 24.2297C101.279 24.2389 101.618 24.2023 102.214 24.0284C104.552 23.3605 106.184 21.6953 106.825 19.3438C107.054 18.5111 107.054 16.425 106.825 15.5924C106.009 12.6461 103.69 10.7979 100.573 10.624C100.124 10.5966 99.491 10.6057 99.161 10.6515ZM101.664 13.8997C102.251 14.1925 102.984 14.9061 103.277 15.4826C104.112 17.1112 103.8 19.2248 102.562 20.3777C101.81 21.0822 101.416 21.2195 100.169 21.2195C99.1885 21.2195 99.0785 21.2012 98.5834 20.9541C96.8141 20.0574 96.0898 17.587 97.0157 15.5924C97.4466 14.6591 98.0792 14.0735 99.0051 13.7441C99.7386 13.4788 100.958 13.552 101.664 13.8997Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M85.2718 10.5234C83.1265 10.8436 81.5955 11.6854 80.9813 12.9023C80.0645 14.7231 80.7246 16.8001 82.5306 17.7609C83.5116 18.2824 84.4742 18.5203 86.3261 18.7033C88.013 18.868 88.618 19.2157 88.618 20.0117C88.618 20.762 87.9855 21.3384 86.922 21.558C85.6568 21.8142 83.1632 21.0639 82.0997 20.1032C81.8981 19.9202 81.7239 19.7921 81.7055 19.8104C81.4763 20.0849 80.1837 22.0155 80.1837 22.0795C80.1837 22.29 81.3663 23.205 82.1364 23.5893C83.1632 24.1016 83.7591 24.2663 85.1526 24.3944C88.233 24.6964 90.6899 23.6625 91.5426 21.7044C92.0101 20.6522 91.9734 19.3438 91.46 18.2824C90.8 16.9282 89.3056 16.1962 86.7203 15.9675C84.7584 15.7845 84.2358 15.5924 83.9058 14.9153C83.7591 14.6225 83.7499 14.5127 83.8416 14.2199C84.0433 13.5428 84.8042 13.2134 86.1519 13.2134C87.4354 13.2134 88.3155 13.4788 89.1589 14.1193L89.4615 14.348L89.6632 14.1101C89.764 13.982 90.1766 13.4971 90.5708 13.0487L91.2859 12.2161L90.8 11.8501C90.1399 11.356 89.0673 10.8619 88.2972 10.6972C87.6371 10.56 85.7669 10.4502 85.2718 10.5234Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M68.999 10.6972C66.0286 11.292 64.1951 13.369 63.8559 16.5165C63.7367 17.587 63.865 19.0144 64.1492 19.966C64.6626 21.6129 65.7444 22.9396 67.1654 23.6259C68.1831 24.1199 68.8248 24.2846 70.0166 24.3487C71.9327 24.4493 73.7112 23.7448 74.5913 22.537L74.8389 22.1893L74.903 22.6102C74.9305 22.839 74.9581 23.1867 74.9581 23.3788C74.9581 24.0284 74.903 24.0101 76.5716 24.0101H78.0751V10.8345H74.9764L74.848 12.5638L74.3438 12.024C73.7846 11.4201 72.932 10.9351 71.9785 10.6972C71.3184 10.5325 69.8333 10.5325 68.999 10.6972ZM72.5928 13.7807C73.9496 14.412 74.7747 15.7845 74.7747 17.404C74.7747 19.0693 73.9588 20.4417 72.6386 21.0456C71.841 21.4025 70.4842 21.4665 69.6224 21.1829C68.5864 20.8352 67.7522 20.0391 67.3396 19.0052C67.0371 18.2366 67.0371 16.608 67.3396 15.8394C67.743 14.8146 68.5589 14.0278 69.5857 13.6801C70.4108 13.3964 71.8593 13.4422 72.5928 13.7807Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M59.1895 10.5691C58.1077 10.6606 57.5118 10.9351 56.7967 11.658L56.1824 12.2802L55.9624 10.8345H52.9554V24.0101H56.1549L56.1824 20.094C56.2099 16.242 56.2191 16.1779 56.43 15.6381C56.7417 14.8329 57.4201 14.2016 58.2269 13.9546C59.382 13.5977 60.5921 13.735 61.4539 14.3205L61.8298 14.5859L62.5632 13.186C63.3975 11.6214 63.3883 11.6946 62.6091 11.2371C61.6648 10.6881 60.5005 10.4593 59.1895 10.5691Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M42.605 10.6972C41.6698 10.9077 40.7347 11.4018 40.0838 12.024L39.5062 12.5821L39.4421 12.0972C39.4146 11.8318 39.3596 11.4384 39.3321 11.2188L39.2771 10.8345H36.27V29.5H39.4787V22.5096L39.9188 22.9305C40.4689 23.4612 40.9914 23.754 41.8624 24.0284C42.4583 24.2114 42.7333 24.2389 43.971 24.2297C45.2544 24.2297 45.4561 24.2023 46.1254 23.9827C47.143 23.6442 47.9406 23.1592 48.6649 22.4272C49.1599 21.9331 49.3799 21.6129 49.7375 20.8718C50.3242 19.6549 50.5167 18.7948 50.5076 17.3766C50.4984 16.1048 50.3059 15.2264 49.8017 14.1833C48.9949 12.5272 47.4272 11.2462 45.6212 10.7979C44.7594 10.5783 43.32 10.5325 42.605 10.6972ZM44.6585 13.8722C45.557 14.101 46.4371 14.8055 46.8405 15.629C47.7664 17.5138 47.1063 19.7738 45.3645 20.6979C43.4392 21.7227 41.0831 20.9816 40.1755 19.0693C39.9096 18.5111 39.8913 18.4105 39.8913 17.4223C39.8913 16.4707 39.9188 16.3152 40.1388 15.8486C40.4689 15.1532 40.7989 14.7231 41.2848 14.3937C42.2107 13.7533 43.4392 13.5703 44.6585 13.8722Z"
+                  fill="currentColor"
+                ></path>
               </svg>
             </a>
-            <p class="footer-tagline">Colocamos empreendedores passos à frente no caminho do sucesso.</p>
+            <p class="footer-tagline">
+              Colocamos empreendedores passos à frente no caminho do sucesso.
+            </p>
           </div>
           <div class="footer-nav">
             <h4>Links</h4>
-            <a href="https://praso.com.br" target="_blank" rel="noopener noreferrer">Site principal</a>
-            <a href="https://praso.inhire.app/vagas" target="_blank" rel="noopener noreferrer">Candidatar-se</a>
+            <a href="https://praso.com.br" target="_blank" rel="noopener noreferrer"
+              >Site principal</a
+            >
+            <a href="https://praso.inhire.app/vagas" target="_blank" rel="noopener noreferrer"
+              >Candidatar-se</a
+            >
             <a href="#job-overview">Visão da vaga</a>
           </div>
           <div class="footer-nav">
