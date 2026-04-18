@@ -1,4 +1,4 @@
-# Praso
+# Praso landing page
 
 Landing page da vaga Delivery Station Associate da Praso, com stack moderna em Vite, CSS modular e conteudo renderizado via JavaScript.
 
